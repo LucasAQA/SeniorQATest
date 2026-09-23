@@ -2,6 +2,7 @@ import userHelper from "../../support/helpers/UserHelper";
 import productService from "../../support/api/ProductService";
 import user from "../../fixtures/user.json";
 import product from "../../fixtures/product.json";
+import messages from "../../fixtures/messages.json";
 
 describe("API - Role-Based Access Control (RBAC)", () => {
   beforeEach(() => {
@@ -20,9 +21,7 @@ describe("API - Role-Based Access Control (RBAC)", () => {
       .createProduct(this.standardToken, product)
       .then((response) => {
         expect(response.status).to.eq(403);
-        expect(response.body.message).to.eq(
-          "Rota exclusiva para administradores",
-        );
+        expect(response.body.message).to.eq(messages.rbac.adminOnly);
       });
   });
 });

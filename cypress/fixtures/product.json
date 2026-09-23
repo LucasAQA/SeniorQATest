@@ -1,6 +1,8 @@
 {
-  "name": "Headset sem fio",
-  "price": 450,
-  "description": "Headset de alta qualidade",
-  "quantity": 10
+  "name": "Produto Teste",
+  "price": 470,
+  "description": "Mouse",
+  "quantity": 10,
+  "purchaseQuantity": 2,
+  "overLimitQuantity": 15
 }

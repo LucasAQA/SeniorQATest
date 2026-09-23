@@ -1,0 +1,14 @@
+{
+  "auth": {
+    "loginSuccess": "Login realizado com sucesso",
+    "invalidCredentials": "Email e/ou senha inválidos",
+    "missingFields": "email e password não podem ficar em branco"
+  },
+  "cart": {
+    "creationSuccess": "Cadastro realizado com sucesso",
+    "insufficientStock": "Produto não possui quantidade suficiente"
+  },
+  "rbac": {
+    "adminOnly": "Rota exclusiva para administradores"
+  }
+}

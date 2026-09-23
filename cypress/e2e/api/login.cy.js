@@ -1,6 +1,7 @@
 import authService from "../../support/api/AuthService";
 import userHelper from "../../support/helpers/UserHelper";
 import user from "../../fixtures/user.json";
+import messages from "../../fixtures/messages.json";
 
 describe("API - Authentication Domain", () => {
   beforeEach(() => {
@@ -20,7 +21,7 @@ describe("API - Authentication Domain", () => {
         expect(response.body)
           .to.have.property("message")
           .that.is.a("string")
-          .and.eq("Login realizado com sucesso");
+          .and.eq(messages.auth.loginSuccess);
         expect(response.body)
           .to.have.property("authorization")
           .that.is.a("string")
@@ -35,8 +36,19 @@ describe("API - Authentication Domain", () => {
         expect(response.status).to.eq(401);
         expect(response.body).to.have.property(
           "message",
-          "Email e/ou senha inválidos",
+          messages.auth.invalidCredentials,
         );
       });
+  });
+
+  it("should return bad request for missing payload fields", () => {
+    authService.login("", "").then((response) => {
+      expect(response.status).to.eq(400);
+
+      expect(response.body).to.have.property(
+        "message",
+        messages.auth.missingFields,
+      );
+    });
   });
 });

@@ -1,14 +1,14 @@
 # Senior QA Test
 
-Repositório de automação de testes **E2E** e **API** desenvolvido com **Cypress**, aplicando modelo de **Page Objects**, camadas de **Serviços**, **Helpers** para gestão de estado e isolamento de dados baseados em **Fixtures** visando maior mantenibilidade e legibilidade.
+Repositório de automação de testes **E2E** e **API**, aplicando modelo de **Page Objects**, camadas de **Serviços**, **Helpers** para gestão de estado e isolamento de dados baseados em **Fixtures** visando maior manutenibilidade e legibilidade.
 
 ---
 
 ## Tecnologias Utilizadas
 
-- **[Cypress](https://www.cypress.io/)** - Framework principal para testes de API e Interface.
-- **JavaScript** - Linguagem de programação utilizada.
-- **Mochawesome Reporter** (`cypress-mochawesome-reporter`) - Ferramenta para geração de relatórios visuais em HTML com captura automática de _screenshots_ em caso de falhas.
+- **Cypress**
+- **JavaScript**
+- **Mochawesome Reporter**
 
 ---
 
@@ -32,21 +32,19 @@ SeniorQATest/
 └── package.json          # Dependências e scripts do projeto
 ```
 
-## Como Configurar e Executar o Projeto
+## Configuração e Execução
 
-**Pré-requisitos**
+### Pré-requisitos
+Certifique-se de que tem os seguintes softwares instalados na sua máquina:
+* **Node.js**
+* **npm**
 
-Node.js e npm
+### 1. Instalação de Dependências
+Clone o repositório para o seu ambiente local e, na raiz do projeto, execute o seguinte comando para instalar todas as dependências necessárias:
 
-1. Instalação de Dependências
-
-Clone o repositório e instale as dependências executando, na raiz do projeto, o comando "npm install"
-
-2. Executando os Testes
-
-Modo interativo: npx cypress open
-
-Modo headless: npx cypress run
+```bash
+npm install
+```
 
 ## Relatórios de Testes e Evidências
 

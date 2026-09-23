@@ -16,6 +16,11 @@ class ProductPage {
   editProductFromList(productName) {
     cy.contains("tr", productName).find("button").contains("Editar").click();
   }
+  uploadImage(fixturePath) {
+    // Busca o input do tipo 'file' e anexa o arquivo da fixture
+    // O { force: true } às vezes é necessário se o input de arquivo original estiver oculto por CSS
+    cy.get('input[type="file"]').selectFile(fixturePath, { force: true });
+  }
 }
 
 export default new ProductPage();

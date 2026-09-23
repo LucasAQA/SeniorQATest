@@ -24,16 +24,19 @@ describe("API - Cart and Inventory Integration", () => {
     userHelper.teardownUsers();
   });
 
-  it("should successfully create a cart with valid payload", function () {
+  // Valida a criação de carrinho com payload válido e retorno do ID do carrinho
+  it("should successfully create a cart with valid payload and return cart ID", function () {
     cartService
       .createCart(this.authToken, this.productId, product.purchaseQuantity)
       .then((cartRes) => {
         expect(cartRes.status).to.eq(201);
         expect(cartRes.body.message).to.eq(messages.cart.creationSuccess);
+        expect(cartRes.body).to.have.property("_id");
         cartHelper.trackCart(this.authToken);
       });
   });
 
+  // Valida a dedução dinâmica do inventário do produto após a criação do carrinho
   it("should dynamically deduct product inventory after cart creation", function () {
     cartService
       .createCart(this.authToken, this.productId, product.purchaseQuantity)
@@ -48,12 +51,23 @@ describe("API - Cart and Inventory Integration", () => {
       });
   });
 
+  // Valida que a criação de carrinho é bloqueada quando a quantidade de compra excede o inventário disponível
   it("should block cart creation if purchase quantity exceeds inventory", function () {
     cartService
       .createCart(this.authToken, this.productId, product.overLimitQuantity)
       .then((cartRes) => {
         expect(cartRes.status).to.eq(400);
         expect(cartRes.body.message).to.eq(messages.cart.insufficientStock);
+      });
+  });
+
+  // Valida que a criação de carrinho é bloqueada com token inválido ou expirado
+  it("should block cart creation with invalid or expired token", function () {
+    const invalidToken = "Bearer token_invalido_ou_expirado";
+    cartService
+      .createCart(invalidToken, this.productId, product.purchaseQuantity)
+      .then((cartRes) => {
+        expect(cartRes.status).to.eq(401);
       });
   });
 });

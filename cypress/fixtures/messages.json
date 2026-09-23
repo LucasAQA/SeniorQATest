@@ -2,7 +2,9 @@
   "auth": {
     "loginSuccess": "Login realizado com sucesso",
     "invalidCredentials": "Email e/ou senha inválidos",
-    "missingFields": "email e password não podem ficar em branco"
+    "missingFields": "email e password não podem ficar em branco",
+    "emailRequired": "email não pode ficar em branco",
+    "passwordRequired": "password não pode ficar em branco"
   },
   "cart": {
     "creationSuccess": "Cadastro realizado com sucesso",
@@ -10,5 +12,14 @@
   },
   "rbac": {
     "adminOnly": "Rota exclusiva para administradores"
+  },
+  "ui": {
+    "clientTitle": "Serverest Store",
+    "adminTitle": "Bem Vindo",
+    "brokenImageAlt": "A imagem do produto está quebrada"
+  },
+  "storage": {
+    "tokenKey": "serverest/userToken",
+    "expiredToken": "Bearer token_vencido_simulado"
   }
 }

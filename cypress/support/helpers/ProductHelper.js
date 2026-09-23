@@ -9,7 +9,7 @@ class ProductHelper {
     return productService.createProduct(token, productData).then((response) => {
       expect(response.status).to.eq(201);
       this.createdProducts.push({ id: response.body._id, token: token });
-      return response.body._id; // Retorna o ID para o teste usar
+      return response.body._id;
     });
   }
 

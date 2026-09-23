@@ -4,5 +4,6 @@
   "description": "Mouse",
   "quantity": 10,
   "purchaseQuantity": 2,
-  "overLimitQuantity": 15
+  "overLimitQuantity": 15,
+  "imagePath": "cypress/fixtures/imgProduct.png"
 }

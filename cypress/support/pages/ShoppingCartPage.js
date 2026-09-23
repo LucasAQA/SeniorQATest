@@ -5,7 +5,7 @@ class ShoppingCartPage {
   }
 
   checkout() {
-    cy.contains("button", "Adicionar no carrinho").click();
+    cy.contains("button", "Finalizar Compra").click();
   }
 }
 

@@ -40,7 +40,7 @@ Node.js e npm
 
 1. Instalação de Dependências
 
-a. Clone o repositório
+a. Clone o repositório 
 b. Instale as dependências executando, na raiz do projeto, o comando "npm install"
 
 2. Executando os Testes

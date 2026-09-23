@@ -3,11 +3,11 @@ import userHelper from "../../support/helpers/UserHelper";
 import user from "../../fixtures/user.json";
 
 describe("API - Authentication Domain", () => {
-  before(() => {
+  beforeEach(() => {
     userHelper.setupUser(user.valid);
   });
 
-  after(() => {
+  afterEach(() => {
     userHelper.teardownUsers();
   });
 
@@ -16,7 +16,6 @@ describe("API - Authentication Domain", () => {
       .login(user.valid.email, user.valid.password)
       .then((response) => {
         expect(response.status).to.eq(200);
-
         expect(response.body).to.be.an("object");
         expect(response.body)
           .to.have.property("message")

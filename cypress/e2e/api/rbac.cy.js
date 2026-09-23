@@ -4,14 +4,14 @@ import user from "../../fixtures/user.json";
 import product from "../../fixtures/product.json";
 
 describe("API - Role-Based Access Control (RBAC)", () => {
-  before(() => {
+  beforeEach(() => {
     userHelper.setupUser(user.standard);
     cy.apiLogin(user.standard.email, user.standard.password).then((token) => {
       cy.wrap(token).as("standardToken");
     });
   });
 
-  after(() => {
+  afterEach(() => {
     userHelper.teardownUsers();
   });
 

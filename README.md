@@ -20,14 +20,14 @@ O projeto segue uma arquitetura modular altamente escalável e de baixa manuten�
 SeniorQATest/
 ├── cypress/
 │   ├── e2e/
-│   │   ├── api/          # Testes de contrato e integração de API (Auth, Cart, RBAC)[cite: 1, 2, 3, 4]
-│   │   └── frontend/     # Testes E2E de interface (Checkout, CRUD Produtos, Segurança UI)[cite: 1, 5, 6, 7]
+│   │   ├── api/          # Testes de contrato e integração de API (Auth, Cart, RBAC)
+│   │   └── frontend/     # Testes E2E de interface (Checkout, CRUD Produtos, Segurança UI)
 │   ├── fixtures/         # Massas de dados parametrizadas (user.json, product.json, messages.json)
 │   └── support/
-│       ├── api/          # Camada de abstração de requisições HTTP (Services)[cite: 1]
-│       ├── helpers/      # Gestão de estado, setup e teardown de dados[cite: 1]
-│       ├── pages/        # Padrão Page Object Model (POM) para mapeamento de telas[cite: 1]
-│       └── urls.js       # Centralização de rotas e endpoints de API[cite: 1]
+│       ├── api/          # Camada de abstração de requisições HTTP (Services)
+│       ├── helpers/      # Gestão de estado, setup e teardown de dados
+│       ├── pages/        # Padrão Page Object Model (POM) para mapeamento de telas
+│       └── urls.js       # Centralização de rotas e endpoints de API
 ├── cypress.config.js     # Configurações globais do Cypress e do Reporter
 └── package.json          # Dependências e scripts do projeto
 ```

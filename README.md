@@ -46,6 +46,27 @@ Clone o repositório para o seu ambiente local e, na raiz do projeto, execute o 
 npm install
 ```
 
+### 2. Execução
+Para executar no modo Interativo, pelo test runner do Cypress, execute o seguinte comando: 
+
+```bash
+npx cypress open
+```
+
+Para executar a suite no modo **Headless**, execute o seguinte comando:
+
+```bash
+npx cypress run
+```
+
+Para escolher seu browser de preferência na execução Headless, execute o comando headless anterior adicionando a flag --browser e especificando qual gostaria de utilizar, em seguida.
+
+Exemplo:
+
+```bash
+npx cypress run --browser chrome
+```
+
 ## Relatórios de Testes e Evidências
 
 O projeto está configurado com o Cypress Mochawesome Reporter para gerar relatórios detalhados contendo o status de cada teste e capturas de tela (screenshots) automáticas caso algum teste venha a falhar.

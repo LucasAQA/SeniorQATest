@@ -1,0 +1,23 @@
+{
+  "name": "seniorqatest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasAQA/SeniorQATest.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/LucasAQA/SeniorQATest/issues"
+  },
+  "homepage": "https://github.com/LucasAQA/SeniorQATest#readme",
+  "devDependencies": {
+    "@faker-js/faker": "^10.6.0",
+    "cypress": "^16.1.0"
+  }
+}

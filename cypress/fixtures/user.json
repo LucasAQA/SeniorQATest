@@ -1,10 +1,18 @@
 {
   "valid": {
-    "email": "teste@qa.com",
-    "password": "teste"
+    "name": "Fulano Admin",
+    "email": "admin@qa.com",
+    "password": "teste",
+    "isAdmin": "true"
   },
   "invalid": {
     "email": "erroteste@qa.com",
     "password": "erroteste"
+  },
+  "standard": {
+    "name": "Fulano Comum",
+    "email": "comum@qa.com",
+    "password": "teste",
+    "isAdmin": "false"
   }
 }

@@ -1,6 +1,6 @@
 {
-  "nome": "Logitech G435 Lightspeed",
-  "preco": 450,
-  "descricao": "Headset sem fio",
-  "quantidade": 10
+  "name": "Headset sem fio",
+  "price": 450,
+  "description": "Headset de alta qualidade",
+  "quantity": 10
 }
